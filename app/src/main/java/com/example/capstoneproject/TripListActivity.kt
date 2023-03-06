@@ -85,6 +85,10 @@ class TripListActivity: AppCompatActivity(), View.OnClickListener,
     {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_trips_list)
+    
+        // Support Action Bar
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+        supportActionBar!!.title = "Trip List"
         
         // Create and populate recycler view
         dbHelperTrip = DBHelperTrip(this)

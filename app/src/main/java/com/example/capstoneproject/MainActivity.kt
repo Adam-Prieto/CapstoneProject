@@ -77,7 +77,7 @@ class MainActivity : AppCompatActivity()
                 val directoryIntent = Intent()
                 Toast.makeText(this@MainActivity, "ADMIN LOGIN",
                     Toast.LENGTH_SHORT).show()
-                directoryIntent.setClass(this, DirectoryActivity::class.java)
+                directoryIntent.setClass(this, DashboardActivity::class.java)
                 startActivity(directoryIntent)
             } // End if
             
@@ -89,7 +89,7 @@ class MainActivity : AppCompatActivity()
                 val directoryIntent = Intent()
                 Toast.makeText(this@MainActivity, "Welcome", Toast.LENGTH_SHORT)
                     .show()
-                directoryIntent.setClass(this, DirectoryActivity::class.java)
+                directoryIntent.setClass(this, DashboardActivity::class.java)
                 startActivity(directoryIntent)
             } // End if
             

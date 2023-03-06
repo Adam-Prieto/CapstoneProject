@@ -15,6 +15,10 @@
         android:theme="@style/Theme.CapstoneProject"
         tools:targetApi="31">
         <activity
+            android:name=".ChatbotActivity"
+            android:exported="false"
+            android:parentActivityName=".DashboardActivity"/>
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -23,10 +27,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".SignUP"
-            android:exported="true">
+            android:exported="true"
+            android:parentActivityName=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -37,23 +41,21 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
         <activity
-            android:name=".DirectoryActivity"
+            android:name=".DashboardActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
         <activity
             android:name=".TripListActivity"
-            android:exported="false">
+            android:exported="false"
+            android:parentActivityName=".DashboardActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
         <activity
             android:name=".CreateUpdateTripActivity"
             android:exported="false">
@@ -61,7 +63,14 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
+        <activity
+            android:name=".CheckInternetAndSettingsActivity"
+            android:exported="true"
+            android:parentActivityName=".DashboardActivity">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
     </application>
 
 </manifest>
