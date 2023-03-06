@@ -23,7 +23,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".SignUP"
             android:exported="true">
@@ -37,15 +36,13 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
         <activity
-            android:name=".DirectoryActivity"
+            android:name=".DashboardActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
         <activity
             android:name=".TripListActivity"
             android:exported="false">
@@ -53,7 +50,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
         <activity
             android:name=".CreateUpdateTripActivity"
             android:exported="false">
@@ -62,6 +58,13 @@
                 android:value="" />
         </activity>
 
+        <activity
+            android:name=".CheckInternetActivity"
+            android:exported="true">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
     </application>
 
 </manifest>

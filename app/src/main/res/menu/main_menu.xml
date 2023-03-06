@@ -24,6 +24,11 @@
         android:title="Settings" />
 
     <item
+        android:id="@+id/nav_connectivity_status"
+        android:icon="@drawable/baseline_wifi_24"
+        android:title="Connectivity"/>
+
+    <item
         android:id="@+id/nav_logout"
         android:icon="@drawable/baseline_exit_to_app_24"
         android:title="Logout" />
