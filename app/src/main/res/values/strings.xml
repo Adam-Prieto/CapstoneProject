@@ -16,8 +16,11 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+    <string name="total_mileage">Total Mileage:  </string>
+    <string name="hours">Hours:  </string>
+    <string name="id">Id:</string>
+    <string name="year">Year:</string>
 
-    <!-- API Keys-->
-    <string name="openAI_api_key">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</string>
-
+    <!-- API Key-->
+    <string name="openAI_api_key">putApiKeyHere</string>
 </resources>

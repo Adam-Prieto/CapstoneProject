@@ -38,13 +38,15 @@ class DashboardActivity : AppCompatActivity()
     
         // Support Action Bar
         supportActionBar!!.title = "Home Dashboard"
-        
+        setContentView(R.layout.activity_dashboard)
+    
         // Intents
-        val intentLogOut = Intent(this, MainActivity::class.java)
         val intentHomeScreen = Intent(this, DashboardActivity::class.java)
         val intentTripList = Intent(this, TripListActivity::class.java)
-        val intentConnectivity = Intent(this, CheckInternetAndSettingsActivity::class.java)
+        val intentSettingsAndConnectivity = Intent(this, CheckInternetAndSettingsActivity::class.java)
         val intentChatbotActivity = Intent(this, ChatbotActivity::class.java)
+        val intentLogOut = Intent(this, MainActivity::class.java)
+        val intentBikeList = Intent(this, BikeListActivity::class.java)
 //****************************************************************************
         
         // CARD VIEW STUFF
@@ -67,7 +69,8 @@ class DashboardActivity : AppCompatActivity()
     
         // Bikes
         cardBikes.setOnClickListener {
-            Toast.makeText(this, "Coming Soon", Toast.LENGTH_SHORT).show()
+            startActivity(intentBikeList)
+            Toast.makeText(this, "Bike List", Toast.LENGTH_SHORT).show()
         } // End cardBikes.setOnClickListener
         
         // Trips
@@ -76,16 +79,20 @@ class DashboardActivity : AppCompatActivity()
             Toast.makeText(this, "Trips", Toast.LENGTH_SHORT).show()
         } // End cardTrips.setOnClickListener
         
-        // Settings
         cardSettings.setOnClickListener {
-            Toast.makeText(this, "Settings", Toast.LENGTH_SHORT).show()
-            startActivity(intentConnectivity)
-        } // End cardSettings.setOnClickListener
+            startActivity(intentSettingsAndConnectivity)
+        }
         
         // Chatbot
         cardChatbot.setOnClickListener {
             startActivity(intentChatbotActivity)
         }// End cardChatbot.setOnClickListener
+        
+        // Settings
+        cardSettings.setOnClickListener {
+            Toast.makeText(this, "Settings", Toast.LENGTH_SHORT).show()
+            startActivity(intentSettingsAndConnectivity)
+        } // End cardSettings.setOnClickListener
         
         // Logout
         cardLogout.setOnClickListener {
@@ -120,6 +127,11 @@ class DashboardActivity : AppCompatActivity()
                     startActivity(intentHomeScreen)
                 } // End R.id.nav_home
                 
+                R.id.nav_bikes ->
+                {
+                    startActivity(intentBikeList)
+                }
+                
                 // Trip List
                 R.id.nav_trips ->
                 {
@@ -131,14 +143,14 @@ class DashboardActivity : AppCompatActivity()
                 R.id.nav_settings ->
                 {
                     Toast.makeText(this, "Settings", Toast.LENGTH_SHORT).show()
-                    startActivity(intentConnectivity)
+                    startActivity(intentSettingsAndConnectivity)
                 } // End R.id.nav_settings
                 
                 // Chatbot
                 R.id.nav_chatbot ->
                 {
                     startActivity(intentChatbotActivity)
-                } // End R.id.nav_connectivity_status
+                } // End R.id.nav_settings
                 
                 // Log out
                 R.id.nav_logout ->
